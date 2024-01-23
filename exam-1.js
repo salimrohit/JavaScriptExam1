@@ -59,12 +59,14 @@ console.log('---------------------------------------');
 
 //9) calculate the revenue if all the cars are rented for a day
 
+for(car in carBooking){
 
+}
 
 //10) count the no of sedan cars
 
-sedan = carBooking.filter((car)=>car[3]=='Sedan').reduce((car1,car2)=>car1[3]+car2[3])
-console.log(`10) the no of sedan cars are ${sedan}`);
+sedan = carBooking.filter((car)=>car[3]=='Sedan').reduce((car1,car2)=>car1[5]+car2[5])
+console.log(sedan);
 
 //11) print all unique car brands
 console.log('11) all unique car brands are :');
@@ -72,6 +74,9 @@ carBooking.forEach((car)=>console.log(car[1]));
 console.log('----------------------------------------');
 
 //12) find the total no of available cars of all type
+
+console.log('12) find the total no of available cars of all type');
+console.log(carBooking.map((item)=>item[5]).reduce((car1,car2)=>car1[5]+car2[5]));
 
 
 //13) find the car with the least availability
